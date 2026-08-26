@@ -26,24 +26,23 @@ header {
 .container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: 40px;
+    gap: 30px;
     margin: 40px;
 }
 
 
 /* うさぎ一覧 */
 .left {
-    flex: 1;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1000px;
     transform: translateX(-30px);
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
 }
-
 
 /* うさぎカード */
 .rabbit-card {
