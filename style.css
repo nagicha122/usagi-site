@@ -6,6 +6,7 @@
 
 /* 全体 */
 body {
+    margin: 0;
     background-image: url("./images/うさぎ２.png");
     background-size: cover;
     background-position: center 30%;
@@ -27,59 +28,71 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px;
+    gap: 40px;
     margin: 40px;
 }
 
 
-/* うさぎ紹介側 */
+/* うさぎ一覧 */
 .left {
-    width: 40%;
-    max-width: 500px;
-    text-align: center;
+    flex: 1;
+    max-width: 900px;
     transform: translateX(-30px);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 }
 
 
-/* 写真カード */
-.rabbit-image {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 25px;
+/* うさぎカード */
+.rabbit-card {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 15px;
     border-radius: 20px;
-    margin-bottom: 25px;
+    text-align: center;
 }
 
 
 /* 写真 */
+.rabbit-image {
+    margin-bottom: 10px;
+}
+
+
 .rabbit-image img {
     width: 100%;
-    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 15px;
 }
 
 
-/* 説明カード */
+/* 説明 */
 .rabbit-text {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 25px;
-    border-radius: 20px;
-    margin-bottom: 40px;
+    padding: 5px;
 }
 
 
-/* 説明文 */
+.rabbit-text h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
 .rabbit-text p {
-    line-height: 1.8;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 
 /* メニュー側 */
 .right {
-    width: 280px;
-    min-height: 450px;
+    width: 220px;
+    min-height: auto;
 
     background: rgba(255, 255, 255, 0.7);
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
 
     transform: translateX(20px);
@@ -99,9 +112,10 @@ h2 {
 }
 
 
-/* 入力欄 */
+/* 検索欄*/
 input {
-    padding: 8px;
+    width: 120px;
+    padding:7px;
     border-radius: 10px;
     border: 1px solid #ccc;
 }
@@ -114,19 +128,29 @@ button {
     border: none;
     cursor: pointer;
 }
+
+
+/* スマホ */
 @media (max-width: 768px) {
+
     .container {
         flex-direction: column;
         align-items: center;
+        margin: 20px;
     }
 
-    .left, .right {
+    .left {
         width: 100%;
         max-width: none;
         transform: none;
-        .rabbit-image img {
-    max-width: 100%;
-    height: auto;
-}
+
+        grid-template-columns: 1fr;
     }
+
+    .right {
+        width: 100%;
+        max-width: 400px;
+        transform: none;
+    }
+
 }
