@@ -1,188 +1,136 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>全国うさぎ動物園ガイド</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
+<!-- スマホ用メニューボタン -->
+<button class="menu-button" onclick="toggleMenu()">☰</button>
 <header>
     <h1>🐰 全国うさぎ動物園ガイド</h1>
     <p>全国の動物園で会えるうさぎを探そう！</p>
 </header>
-
-
 <div class="container">
-
-
     <!-- =========================
          うさぎ紹介側
     ========================== -->
-
     <div class="left">
-
-
         <!-- ホーランドロップ -->
         <div class="rabbit-card">
-
             <div class="rabbit-image">
                 <img src="images/usagi.jpg" alt="ホーランドロップ">
             </div>
-
             <div class="rabbit-text">
                 <h2>🐰 ホーランドロップ</h2>
-
                 <p>
                     垂れた耳が特徴の人気品種です。
                     穏やかで人懐っこい性格の子が多く、
                     丸い顔とふわふわの毛並みが魅力です。
                 </p>
             </div>
-
         </div>
-
-
         <!-- ネザーランドドワーフ -->
         <div class="rabbit-card">
-
             <div class="rabbit-image">
                 <img src="images/ネザーランド.jpeg" alt="ネザーランドドワーフ">
             </div>
-
             <div class="rabbit-text">
                 <h2>🐰 ネザーランドドワーフ</h2>
-
                 <p>
                     小さな体と短い耳が特徴の人気品種です。
                     活発で好奇心旺盛な性格の子が多く、
                     ぬいぐるみのような可愛らしさがあります。
                 </p>
             </div>
-
         </div>
-
-
         <!-- ミニレッキス -->
         <div class="rabbit-card">
-
             <div class="rabbit-image">
                 <img src="images/ミニレッキス.jpeg" alt="ミニレッキス">
             </div>
-
             <div class="rabbit-text">
                 <h2>🐰 ミニレッキス</h2>
-
                 <p>
                     なめらかで光沢のある毛並みが特徴の品種です。
                     短い毛はベルベットのような触り心地で、
                     穏やかで人懐っこい性格の子が多いです。
                 </p>
             </div>
-
         </div>
-
-
         <!-- ライオンヘッド -->
         <div class="rabbit-card">
-
             <div class="rabbit-image">
                 <img src="images/ライオン.jpg" alt="ライオンヘッド">
             </div>
-
             <div class="rabbit-text">
                 <h2>🐰 ライオンヘッド</h2>
-
                 <p>
                     頭の周りにたてがみのような毛があるのが特徴です。
                     個性的でかわいらしい見た目が魅力の品種です。
                 </p>
             </div>
-
         </div>
-
-
         <!-- アンゴラウサギ -->
         <div class="rabbit-card">
-
             <div class="rabbit-image">
                 <img src="images/アンゴラ.jpeg" alt="アンゴラウサギ">
             </div>
-
             <div class="rabbit-text">
                 <h2>🐰 アンゴラウサギ</h2>
-
                 <p>
                     長くてふわふわの毛が特徴の品種です。
                     まるでぬいぐるみのような姿をしており、
                     とても柔らかな毛並みが魅力です。
                 </p>
             </div>
-
         </div>
-
-
         <!-- ミニウサギ -->
         <div class="rabbit-card">
-
             <div class="rabbit-image">
                 <img src="images/ミニウサギ.jpg" alt="ミニウサギ">
             </div>
-
             <div class="rabbit-text">
                 <h2>🐰 ミニウサギ</h2>
-
                 <p>
                     ミニウサギは特定の品種ではなく、
                     さまざまな種類のうさぎを掛け合わせた
                     日本で親しまれている呼び方です。
                 </p>
             </div>
-
         </div>
-
     </div>
-
-
     <!-- =========================
-         右側メニュー
+         メニュー
     ========================== -->
-
-    <div class="right">
-
+    <div class="right" id="mobile-menu">
         <section>
-
             <h2>🔍 うさぎを検索</h2>
-
             <input
                 type="text"
                 placeholder="うさぎの名前を入力">
-
             <button>検索</button>
-
         </section>
-
-
         <section>
-
             <h2>🐰 品種一覧</h2>
-
             <p>ホーランドロップ</p>
             <p>ネザーランドドワーフ</p>
             <p>ミニレッキス</p>
             <p>ライオンヘッド</p>
             <p>アンゴラウサギ</p>
             <p>ミニウサギ</p>
-
         </section>
-
     </div>
-
-
 </div>
-
+<!-- =========================
+     スマホ用メニュー開閉
+========================== -->
+<script>
+    function toggleMenu() {
+        document.getElementById("mobile-menu").classList.toggle("open");
+    }
+</script>
 </body>
 </html>
